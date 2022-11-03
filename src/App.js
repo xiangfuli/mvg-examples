@@ -15,6 +15,7 @@ export const FluentAccordion = wrap(fluentAccordion());
 export const FluentAccordionItem = wrap(fluentAccordionItem());
 
 function App() {
+  document.title = "MVG examples"
   return (
     <div className={"flex-container"}>
       <div style={{margin: 10}}>
