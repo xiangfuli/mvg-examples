@@ -166,6 +166,7 @@ export default class PictureDistortion extends React.Component {
         worldCoordinates: ""
       }
     )
+    window.location.reload();
   }
 
   clearPoints() {
