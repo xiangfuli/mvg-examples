@@ -112,13 +112,13 @@ export default class PictureDistortion extends React.Component {
         this.zoomCanvasContext.fillStyle = "black";
         this.zoomCanvasContext.fillText("X: " + this.state.pixelXLoc + ", Y: " + this.state.pixelYLoc, 10, 10)
         this.zoomCanvasContext.beginPath();
-        this.zoomCanvasContext.moveTo(100, 50); // Move the pen to (30, 50)
-        this.zoomCanvasContext.lineTo(100, 150); // Draw a line to (150, 100)
-        this.zoomCanvasContext.stroke(); //
+        this.zoomCanvasContext.moveTo(100, 50); // Move the pen to (100, 50)
+        this.zoomCanvasContext.lineTo(100, 150); // Draw a line to (100, 150)
+        this.zoomCanvasContext.stroke();
         this.zoomCanvasContext.beginPath();
-        this.zoomCanvasContext.moveTo(50, 100); // Move the pen to (30, 50)
+        this.zoomCanvasContext.moveTo(50, 100); // Move the pen to (50, 100)
         this.zoomCanvasContext.lineTo(150, 100); // Draw a line to (150, 100)
-        this.zoomCanvasContext.stroke(); //
+        this.zoomCanvasContext.stroke();
       }
     )
   }
@@ -189,7 +189,7 @@ export default class PictureDistortion extends React.Component {
     for (var i=0; i<4; i++) {
       // image point
       let ip = this.state.chosenPixels[i]
-      // world point
+      // world plane point
       let wp = this.state.worldCoordinates[i]
       A = [...A, [ip.x, ip.y, 1, 0, 0, 0, -ip.x*wp.x, -ip.y*wp.x]]
       b = [...b, [wp.x]]
@@ -204,8 +204,6 @@ export default class PictureDistortion extends React.Component {
     H = [[H.get([0, 0]), H.get([1, 0]), H.get([2, 0])], 
              [H.get([3, 0]), H.get([4, 0]), H.get([5, 0])],
              [H.get([6, 0]), H.get([7, 0]), H.get([8, 0])]]
-
-    // H_inv = math.inv(H_inv)
 
     for (var i=0; i<this.img.width; i++) {
       for (var j=0; j<this.img.height; j++) {
