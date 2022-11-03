@@ -257,7 +257,7 @@ export default class PictureDistortion extends React.Component {
             <div style={{"marginTop": "20px"}}>
               <Button onClick={()=>this.clear()}>Clear Picture</Button>
               <Button style={{"marginLeft": "20px"}} onClick={()=>this.clearPoints()}>Clear Points</Button>
-              { this.state.chosenPoints == 4 && this.state.worldCoordinates.length == 4 && <Button style={{"marginLeft": "20px"}} onClick={()=>this.remove_distortion()}>Remove Distortion</Button>}
+              { this.state.chosenPoints == 4 && this.state.worldCoordinates.length == 4 && <Button type={"primary"} style={{"marginLeft": "20px"}} onClick={()=>this.remove_distortion()}>Remove Distortion</Button>}
             </div>
           )}
             <div style={{"marginTop": "20px", display: "flex", height: "300px"}}>
