@@ -2,6 +2,7 @@
   "name": "mvg-examples",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://xiangfuli.github.io/mvg-examples",
   "dependencies": {
     "@fluentui/web-components": "^2.5.8",
     "@microsoft/fast-element": "^1.11.0",
@@ -21,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "EXTEND_ESLINT=true react-scripts start",
     "build": "EXTEND_ESLINT=true react-scripts build",
     "test": "EXTEND_ESLINT=true react-scripts test"
@@ -42,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
