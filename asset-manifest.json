@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mvg-examples/static/css/main.7fc0560f.css",
+    "main.js": "/mvg-examples/static/js/main.56cb0c8f.js",
+    "index.html": "/mvg-examples/index.html",
+    "main.7fc0560f.css.map": "/mvg-examples/static/css/main.7fc0560f.css.map",
+    "main.56cb0c8f.js.map": "/mvg-examples/static/js/main.56cb0c8f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fc0560f.css",
+    "static/js/main.56cb0c8f.js"
+  ]
+}
